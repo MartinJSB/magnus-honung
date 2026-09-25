@@ -1,4 +1,3 @@
-import { Bee } from "./Brand";
 export function Story() {
   return (
     <>
@@ -39,27 +38,47 @@ export function Story() {
             Nykvarn. Vill du hämta en burk honung går det bra på någon av platserna – ni bestämmer
             tillsammans var och när det passar.
           </p>
-          <p>
-            Det har varit en dröm länge. Inte att göra något stort, utan att göra något som känns
-            meningsfullt. Att lära sig, ta hand om bina och få dela med sig av honungen längs vägen.
-          </p>
-          <p>
-            Och det är ungefär så han vill ha det. Nära naturen, i liten skala och med hjärtat med.
-            En riktigt god honung blir en fin bonus.
-          </p>
           <div className="signature">
             Magnus<span>Biodlare med hjärtat i det gröna</span>
           </div>
         </div>
       </section>
-      <section className="nature-note">
-        <Bee />
-        <p>
-          För Magnus börjar det med bina.
-          <br />
-          <em>Honungen är bara en del av det fina.</em>
-        </p>
-        <span>En nyfikenhet på naturen som aldrig riktigt tar slut.</span>
+      <section className="quality" aria-labelledby="quality-heading">
+        <div className="quality__inner">
+          <a
+            className="quality__preview"
+            href="/documents/kvalitetsintyg-2026-magnus-brolin.pdf"
+            aria-label="Visa Magnus Brolins kvalitetsintyg 2026 som PDF"
+          >
+            <img
+              src="/images/kvalitetsintyg-2026-magnus-brolin.webp"
+              alt="Kvalitetsintyg 2026 tilldelat Magnus Brolin"
+              width="778"
+              height="1100"
+              loading="lazy"
+            />
+          </a>
+          <div className="quality__text">
+            <p className="eyebrow">GODKÄND HONUNGSBEDÖMNING · 2026</p>
+            <h2 id="quality-heading">
+              Mycket hjärta.
+              <br />
+              <em>Och noga med honungen.</em>
+            </h2>
+            <p>
+              Magnus pratar gärna om sina bin. Men honungen får också tala för sig själv. Den har
+              bedömts med godkänt resultat enligt Sveriges Biodlares Riksförbunds honungsreglemente
+              – förpackning, färg, renhet, konsistens och vattenhalt.
+            </p>
+            <a className="text-link" href="/documents/kvalitetsintyg-2026-magnus-brolin.pdf">
+              Läs kvalitetsintyget <span className="quality__format">PDF · 1 MB</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <p className="quality__issued">
+              Utfärdat av SSB – Biodlarförening den 23 september 2026.
+            </p>
+          </div>
+        </div>
       </section>
     </>
   );
