@@ -87,7 +87,7 @@ export function OrderForm() {
         <h2>
           Beställ honung.
           <br />
-          <em>Hämta i Sundby eller Nykvarn.</em>
+          <em>Hämta i Spånga eller Nykvarn.</em>
         </h2>
         <p>
           Skicka en beställningsförfrågan så hör Magnus av sig om tillgång och hur du får din
@@ -99,8 +99,8 @@ export function OrderForm() {
           <span>03 — Betala enkelt med Swish</span>
         </div>
         <p className="hint">
-          Hämta hemma hos Magnus i Sundby i Spånga eller på gården i Nykvarn, efter överenskommelse.
-          Magnus bekräftar plats och tid. Ingen betalning förrän beställningen är bekräftad.
+          Hämta hemma hos Magnus i Spånga eller på gården i Nykvarn, efter överenskommelse. Magnus
+          bekräftar plats och tid. Ingen betalning förrän beställningen är bekräftad.
         </p>
       </div>
 
@@ -179,7 +179,7 @@ export function OrderForm() {
           <label className="field">
             Leverans
             <select name="delivery" defaultValue="pickup">
-              <option value="pickup">Hämtar i Sundby / Nykvarn</option>
+              <option value="pickup">Hämtar i Spånga / Nykvarn</option>
               <option value="local-delivery">Leverans i närområdet</option>
             </select>
           </label>
@@ -190,7 +190,7 @@ export function OrderForm() {
           <textarea
             name="message"
             rows={3}
-            placeholder="Skriv gärna om du helst hämtar i Sundby eller på gården i Nykvarn."
+            placeholder="Skriv gärna om du helst hämtar i Spånga eller på gården i Nykvarn."
           />
         </label>
 
