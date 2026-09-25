@@ -10,9 +10,9 @@ export function Footer() {
           </span>
         </a>
         <p>
-          En gammal dröm.
+          Svensk honung
           <br />
-          <em>Något gott att dela.</em>
+          <em>från gården i Nykvarn.</em>
         </p>
         <a className="text-link" href="#magnus">
           Tillbaka till Magnus ↑
@@ -20,7 +20,7 @@ export function Footer() {
       </div>
       <div className="footer__bottom">
         <span>© {new Date().getFullYear()} Magnus Honung</span>
-        <span>Småskaligt. Svenskt. Med omtanke.</span>
+        <span>Magnus Brolin · Sundby och Nykvarn</span>
       </div>
     </footer>
   );

@@ -13,7 +13,7 @@ export function Header() {
           </span>
         </a>
         <nav aria-label="Huvudmeny">
-          <a href="#magnus">Möt Magnus</a>
+          <a href="#magnus">Om Magnus</a>
           <a href="#honung">Honungen</a>
           <a href="#klass">För klasser</a>
           <a href="#bestall" className="button button--small">

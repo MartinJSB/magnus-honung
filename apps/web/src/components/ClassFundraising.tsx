@@ -5,15 +5,15 @@ export function ClassFundraising() {
   return (
     <section id="klass" className="fundraising">
       <div className="fundraising__intro">
-        <p className="eyebrow">NÅGOT GOTT ATT GÖRA TILLSAMMANS</p>
+        <p className="eyebrow">FÖR KLASSER OCH FÖRENINGAR</p>
         <h2>
           Små burkar.
           <br />
-          <em>Stora klassdrömmar.</em>
+          <em>Pengar till klasskassan.</em>
         </h2>
         <p>
-          En klassresa, en lagcup eller något helt annat att längta till? Sälj honung som familj och
-          grannar kan njuta av, och låt en del gå till er gemensamma dröm.
+          Ska klassen eller laget på resa, cup eller något annat? Köp honung till klasspris, sälj
+          till ordinarie pris och behåll mellanskillnaden.
         </p>
         <a href="#bestall" className="button button--light">
           Beställ till klassen <Arrow />
@@ -39,13 +39,13 @@ export function ClassFundraising() {
           <li>
             <span>02</span>
             <p>
-              <strong>Sälj något gott</strong>Familj och grannar köper för {retail} kr per burk.
+              <strong>Sälj vidare</strong>Familj och grannar köper för {retail} kr per burk.
             </p>
           </li>
           <li>
             <span>03</span>
             <p>
-              <strong>Kom närmare er dröm</strong>40 burkar ger {40 * (retail - CLASS_PRICE_SEK)} kr
+              <strong>Behåll skillnaden</strong>40 burkar ger {40 * (retail - CLASS_PRICE_SEK)} kr
               till klasskassan.
             </p>
           </li>

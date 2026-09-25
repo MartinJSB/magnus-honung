@@ -1,6 +1,6 @@
 # Design assets
 
-The portrait photographs in `apps/web/public/images` were supplied by the owner. The redesign uses `springa.jpg` and `rhodos.jpg` without modifying the originals; framing is handled by CSS.
+The portrait photographs in `apps/web/public/images` were supplied by the owner. The site uses `springa.jpg` without modifying the original; framing is handled by CSS.
 
 `apps/web/public/images/honey-still-life.png` was generated with the built-in image generation tool. It is an illustrative mood photograph, not a photograph of Magnus's actual honey or apiary. Product jars are CSS packaging illustrations.
 

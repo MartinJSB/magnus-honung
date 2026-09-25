@@ -5,7 +5,7 @@ export function Hero() {
       <section className="hero">
         <div className="hero__text">
           <p className="eyebrow">
-            <span className="little-line" /> SMÅSKALIGT. SVENSKT. PERSONLIGT.
+            <span className="little-line" /> SVENSK HONUNG FRÅN NYKVARN
           </p>
           <h1>
             En liten burk.
@@ -15,9 +15,9 @@ export function Hero() {
             <em>En gammal dröm.</em>
           </h1>
           <p className="hero__intro">
-            Det började med att Magnus pratade om bin.
-            <br className="desktop-break" /> Och pratade lite till. Nu får drömmen ta plats
-            <br className="desktop-break" /> – en kupa och en burk i taget.
+            Magnus har pratat om bin i många år.
+            <br className="desktop-break" /> Nu står fyra kupor på gården i Nykvarn,
+            <br className="desktop-break" /> och årets honung finns att beställa.
           </p>
           <div className="hero__actions">
             <a href="#honung" className="button">
@@ -30,7 +30,7 @@ export function Hero() {
           <a className="hero__person" href="#magnus">
             <img src="/images/springa.jpg" alt="" />
             <span>
-              Från Magnus, med omtanke.<small>För bina, naturen och det goda i vardagen.</small>
+              Magnus Brolin<small>Lär känna biodlaren</small>
             </span>
           </a>
         </div>
@@ -52,11 +52,11 @@ export function Hero() {
       <div className="values-strip">
         <span>Svensk honung</span>
         <i>✳</i>
-        <span>Småskalig biodling</span>
+        <span>Slungad för hand</span>
         <i>✳</i>
-        <span>Direkt från Magnus</span>
+        <span>Kvalitetsbedömd 2026</span>
         <i>✳</i>
-        <span>Med naturen nära</span>
+        <span>Direkt från biodlaren</span>
       </div>
     </>
   );

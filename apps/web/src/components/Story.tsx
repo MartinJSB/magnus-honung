@@ -9,37 +9,29 @@ export function Story() {
               alt="Magnus ute på en löprunda i grönskan"
               loading="lazy"
             />
-            <figcaption>Magnus, som gärna är där det grönskar.</figcaption>
-          </figure>
-          <figure className="story__small-photo">
-            <img
-              src="/images/rhodos.jpg"
-              alt="Magnus tillsammans med sällskap på semester vid havet"
-              loading="lazy"
-            />
-            <figcaption>Lite ledigt, mycket liv.</figcaption>
+            <figcaption>Magnus Brolin</figcaption>
           </figure>
         </div>
         <div className="story__text">
-          <p className="eyebrow">MÄNNISKAN BAKOM HONUNGEN</p>
+          <p className="eyebrow">OM MAGNUS</p>
           <h2>
             Det här är Magnus.
             <br />
-            <em>Han gillar bin.</em>
+            <em>Han har fyra kupor</em>
             <br />
-            Väldigt mycket.
+            på gården i Nykvarn.
           </h2>
           <p>
-            Alla som känner Magnus har nog hört honom prata om biodling. Om bina, om blommorna och
-            om hur fint det är att få vara en liten del av allt som växer.
+            Biodling har länge varit Magnus stora intresse – den som känner honom har säkert hört
+            honom berätta om bina. Honungen slungas och tappas på burk för hand, i små mängder och
+            efter säsongen.
           </p>
           <p>
-            Till vardags bor han i en villa i Sundby. Annars hittar man honom gärna på gården i
-            Nykvarn. Vill du hämta en burk honung går det bra på någon av platserna – ni bestämmer
-            tillsammans var och när det passar.
+            Magnus bor i Sundby och är ofta på gården i Nykvarn. Honungen kan hämtas på båda
+            ställena – ni kommer överens om tid och plats.
           </p>
           <div className="signature">
-            Magnus<span>Biodlare med hjärtat i det gröna</span>
+            Magnus<span>Biodlare i Nykvarn</span>
           </div>
         </div>
       </section>

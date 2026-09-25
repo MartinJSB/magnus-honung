@@ -83,11 +83,11 @@ export function OrderForm() {
   return (
     <section id="bestall" className="section order">
       <div className="order__intro">
-        <p className="eyebrow">DIREKT FRÅN MAGNUS</p>
+        <p className="eyebrow">DIREKT FRÅN BIODLAREN</p>
         <h2>
-          En burk till dig?
+          Beställ honung.
           <br />
-          <em>Vi ordnar det.</em>
+          <em>Hämta i Sundby eller Nykvarn.</em>
         </h2>
         <p>
           Skicka en beställningsförfrågan så hör Magnus av sig om tillgång och hur du får din

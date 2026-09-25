@@ -13,17 +13,15 @@ export function Products() {
           </h2>
         </div>
         <p>
-          I en kopp te. På en varm smörgås. Eller en liten sked precis som den är. Välj en burk till
-          dig själv eller någon du tycker om.
+          I en kopp te. På en varm smörgås. Eller en sked precis som den är. Till dig själv eller
+          som present.
         </p>
       </div>
       <div className={PRODUCTS.length === 1 ? "products products--single" : "products"}>
         {PRODUCTS.map((p, i) => (
           <article key={p.id} className="product">
             <div className={`product__visual product__visual--${i}`}>
-              <span className="product__note">
-                {i === 0 ? "Till vardagens goda stunder" : "En liten gåva från naturen"}
-              </span>
+              <span className="product__note">Årets skörd</span>
               <div
                 className={`jar jar--${p.sizeGrams}`}
                 role="img"
@@ -34,19 +32,15 @@ export function Products() {
                   <Bee />
                   <span>magnus</span>
                   <small>SVENSK HONUNG</small>
-                  <i>{p.sizeGrams} g · Med omtanke</i>
+                  <i>{p.sizeGrams} g · Nykvarn</i>
                 </div>
               </div>
               <span className="product__weight">{p.sizeGrams} G</span>
             </div>
             <div className="product__details">
               <div>
-                <h3>{i === 0 ? "Sommarhonung" : "En liten sommarhonung"}</h3>
-                <p>
-                  {i === 0
-                    ? "Den stora burken för små, goda vardagsstunder."
-                    : "Till någon du tycker om. Eller bara till dig."}
-                </p>
+                <h3>{p.name}</h3>
+                <p>{p.description}</p>
               </div>
               <span className="product__price">
                 {p.priceSek}
