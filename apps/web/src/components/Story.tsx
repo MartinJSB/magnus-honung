@@ -13,6 +13,16 @@ export function Story() {
             />
             <figcaption>Magnus och hans son Henke</figcaption>
           </figure>
+          <figure className="story__small-photo">
+            <img
+              src="/images/liten_biodlare.webp"
+              alt="Henke i bidräkt ler bredvid en kupa med en ram full av bin"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption>Liten biodlare</figcaption>
+          </figure>
         </div>
         <div className="story__text">
           <p className="eyebrow">OM MAGNUS</p>
