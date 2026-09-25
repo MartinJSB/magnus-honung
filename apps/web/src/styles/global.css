@@ -322,7 +322,7 @@ img {
   height: 490px;
   width: 100%;
   object-fit: cover;
-  object-position: 65% center;
+  object-position: center 40%;
   border-radius: 3px;
 }
 .story figcaption {

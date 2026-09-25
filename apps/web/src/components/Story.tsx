@@ -5,8 +5,10 @@ export function Story() {
         <div className="story__photos">
           <figure className="story__main-photo">
             <img
-              src="/images/springa.jpg"
-              alt="Magnus ute på en löprunda i grönskan"
+              src="/images/biodlare.webp"
+              alt="Magnus i bidräkt vid kuporna tillsammans med en liten biodlare i egen dräkt"
+              width="1000"
+              height="1250"
               loading="lazy"
             />
             <figcaption>Magnus Brolin</figcaption>
