@@ -881,7 +881,7 @@ textarea:focus {
     font-size: clamp(44px, 8.4vw, 65px);
   }
   .hero .eyebrow {
-    font-size: 8px;
+    font-size: 10px;
     margin-bottom: 22px;
   }
   .hero__intro {
@@ -913,7 +913,7 @@ textarea:focus {
     grid-template-columns: 1fr 1fr;
     padding: 22px 6%;
     gap: 15px;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
   }
   .values-strip i {
@@ -955,7 +955,7 @@ textarea:focus {
     font-size: 25px;
   }
   .nature-note > span {
-    font-size: 10px;
+    font-size: 12px;
   }
   .section-heading {
     display: block;
@@ -996,10 +996,11 @@ textarea:focus {
     gap: 11px;
   }
   .grid {
+    grid-template-columns: 1fr;
     gap: 14px;
   }
   .quantity {
-    font-size: 11px;
+    font-size: 13px;
   }
   .quantity small {
     display: block;
@@ -1013,17 +1014,80 @@ textarea:focus {
     font-size: 21px;
   }
   .footer__top > .text-link {
-    font-size: 11px;
+    font-size: 13px;
+    min-height: 44px;
   }
   .footer__bottom {
     gap: 20px;
-    font-size: 8px;
+    font-size: 11px;
   }
   .hero__caption {
     font-size: 7px;
   }
   .honey-footnote {
-    font-size: 10px;
+    font-size: 12px;
+  }
+  /* 16px stops iOS Safari from zooming in when a field gets focus. */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+  .toggle label {
+    padding: 12px 9px;
+    font-size: 13px;
+  }
+  .quantity input {
+    min-height: 44px;
+  }
+  .header nav > .button {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .eyebrow {
+    font-size: 11px;
+  }
+  .hero__person {
+    font-size: 13px;
+  }
+  .hero__person small,
+  .story figcaption,
+  .signature span,
+  .product__note,
+  .product__weight,
+  .steps li > span,
+  .hint {
+    font-size: 12px;
+  }
+  .product__details p,
+  .steps p,
+  .order__info,
+  .field__error {
+    font-size: 13px;
+  }
+  .product__link,
+  .field,
+  .text-link {
+    font-size: 13px;
+  }
+  .product__link {
+    min-height: 44px;
+    align-items: center;
+  }
+  .steps strong {
+    font-size: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .logo {
+    font-size: 24px;
+  }
+  .logo svg {
+    width: 28px;
+  }
+  .header nav > .button {
+    padding: 10px 11px;
+    gap: 8px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
