@@ -5,20 +5,21 @@ flowchart LR
   G[git push main] --> A[GitHub Actions<br/>check → build → push]
   A -->|image| R[Artifact Registry]
   A -->|gcloud run deploy| C[Cloud Run<br/>API + web]
-  L[Loopia DNS<br/>magnushonung.se] --> C
+  L[Cloud DNS<br/>magnushonung.se] --> C
   C -->|SMTP| M[Loopia mail]
 ```
 
 - **Terraform** (`infra/terraform`) owns the infrastructure: Cloud Run service, Artifact
-  Registry, Secret Manager, service accounts, keyless GitHub auth (Workload Identity Federation),
+  Registry, Secret Manager, Cloud DNS, service accounts, keyless GitHub auth (Workload Identity Federation),
   domain mapping and the **10 SEK/month budget alert**. Run it from your machine.
 - **GitHub Actions** (`.github/workflows/deploy.yml`) owns the running image: every push to
   `main` runs `npm run check`, builds the `Dockerfile`, pushes it and deploys a new revision. Pull
   requests only run the check.
 
-## Staying free
+## Cost
 
-Cloud Run scales to zero and the always-free tier (2M requests/month) covers a site this size.
+The only running cost is the Cloud DNS zone (about 0.20 USD/month). Cloud Run scales to zero and
+the always-free tier (2M requests/month) covers a site this size.
 Artifact Registry keeps only the 3 newest images to stay under 0.5 GB. `max_instance_count = 2`
 caps what a traffic spike can cost. The budget **only alerts**, it does not stop spending. Alerts
 go by email to the billing account admins at 50 %, 90 % and 100 % (actual and forecasted).
@@ -58,13 +59,17 @@ Tools: `brew install --cask google-cloud-sdk` and `brew install hashicorp/tap/te
    GitHub → Settings → Secrets and variables → Actions → **Variables** (not secrets; none of them
    are sensitive). Then push to `main`. The first run replaces the placeholder "hello" container.
 
-4. **Domain** (once `magnushonung.se` is bought at Loopia):
-   1. Verify the domain in [Google Search Console](https://search.google.com/search-console)
-      with the same Google account that runs Terraform (add the TXT record it shows at Loopia).
-   2. Set `domains = ["magnushonung.se", "www.magnushonung.se"]` in `terraform.tfvars` and apply.
-   3. `terraform output dns_records` lists the A/AAAA/CNAME records. Add them in Loopia Customer
-      Zone → DNS-editor and remove Loopia's default parking records for the same names.
-   4. The HTTPS certificate is issued automatically, usually within an hour of DNS resolving.
+4. **Domain.** `magnushonung.se` is registered at Loopia, but DNS is hosted in **Google Cloud DNS**
+   (`infra/terraform/dns.tf`), since Loopia's DNS editor costs extra. All records live in Terraform.
+   1. In Loopia Customer Zone → magnushonung.se → **Namnservrar**, enter the four servers from
+      `terraform output name_servers`.
+   2. In [Google Search Console](https://search.google.com/search-console), add a **Domain**
+      property with the same Google account that runs Terraform. Put the
+      `google-site-verification=...` value in `apex_txt`, apply, then click Verify.
+   3. Set `domains = ["magnushonung.se", "www.magnushonung.se"]` and apply. This creates the Cloud
+      Run domain mappings and their A/AAAA/CNAME records. HTTPS is issued automatically, usually
+      within an hour.
+   4. Mail records from Resend go in `extra_dns_records`.
 
 ## State
 

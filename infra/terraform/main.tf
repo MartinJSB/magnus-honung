@@ -5,6 +5,7 @@ locals {
     "artifactregistry.googleapis.com",
     "billingbudgets.googleapis.com",
     "cloudresourcemanager.googleapis.com",
+    "dns.googleapis.com",
     "iam.googleapis.com",
     "iamcredentials.googleapis.com",
     "run.googleapis.com",

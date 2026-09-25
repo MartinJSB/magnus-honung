@@ -37,6 +37,29 @@ variable "domains" {
   default     = []
 }
 
+# --- DNS (Cloud DNS zone, see dns.tf) ---
+
+variable "dns_zone_domain" {
+  type    = string
+  default = "magnushonung.se"
+}
+
+variable "apex_txt" {
+  description = "TXT values on the bare domain, e.g. the Google Search Console google-site-verification=... token."
+  type        = list(string)
+  default     = []
+}
+
+variable "extra_dns_records" {
+  description = "Other records, e.g. from Resend. name is relative to the zone (\"send\", \"resend._domainkey\")."
+  type = list(object({
+    name    = string
+    type    = string
+    rrdatas = list(string)
+  }))
+  default = []
+}
+
 # --- Budget ---
 
 variable "budget_amount" {

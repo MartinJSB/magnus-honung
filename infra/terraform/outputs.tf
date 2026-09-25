@@ -2,13 +2,9 @@ output "service_url" {
   value = google_cloud_run_v2_service.app.uri
 }
 
-output "dns_records" {
-  description = "Add these at Loopia (DNS-editor) for each mapped domain."
-  value = {
-    for domain, m in google_cloud_run_domain_mapping.app : domain => [
-      for r in m.status[0].resource_records : { type = r.type, name = r.name, value = r.rrdata }
-    ]
-  }
+output "name_servers" {
+  description = "Enter these under Namnservrar for the domain in Loopia Customer Zone."
+  value       = google_dns_managed_zone.site.name_servers
 }
 
 # Values for GitHub > Settings > Secrets and variables > Actions > Variables.
