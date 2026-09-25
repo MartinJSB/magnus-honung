@@ -66,5 +66,6 @@ Without `SMTP_HOST` set, emails are printed in the terminal instead of sent.
 
 ## Deploying
 
-One Node service is enough: build, set `STATIC_DIR=../web/dist` and the SMTP variables, run
-`npm start`. Works on e.g. Render, Railway or Fly.io. Point `magnushonung.se` at it.
+Pushes to `main` deploy automatically to GCP Cloud Run via GitHub Actions. Infrastructure
+(including a 10 SEK/month budget alert) is managed with Terraform in `infra/terraform`. See
+[docs/deployment.md](docs/deployment.md) for first-time setup and the domain.

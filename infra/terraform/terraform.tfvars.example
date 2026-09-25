@@ -1,0 +1,12 @@
+project_id      = "magnus-honung"
+billing_account = "012345-6789AB-CDEF01"
+budget_currency = "SEK"
+
+order_inbox = "magnus@magnushonung.se"
+smtp_user   = "no-reply@magnushonung.se"
+
+# Add after verifying the domain in Google Search Console:
+# domains = ["magnushonung.se", "www.magnushonung.se"]
+
+# Don't put smtp_pass here; pass it at apply time:
+#   TF_VAR_smtp_pass='...' terraform apply
