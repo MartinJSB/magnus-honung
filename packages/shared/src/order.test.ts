@@ -30,11 +30,6 @@ describe("orderRequestSchema", () => {
 
 describe("orderTotalSek", () => {
   it("sums price times quantity", () => {
-    expect(
-      orderTotalSek([
-        { productId: "sommarhonung-500", quantity: 2 },
-        { productId: "sommarhonung-250", quantity: 1 },
-      ]),
-    ).toBe(335);
+    expect(orderTotalSek([{ productId: "sommarhonung-500", quantity: 2 }])).toBe(340);
   });
 });

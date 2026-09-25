@@ -25,10 +25,10 @@ Reference points (500 g):
 - Average Swedish beekeeper price 2025: ~100 SEK (Biodlartips "Honungsbörsen").
 - Premium local producers: 130–160 SEK.
 
-**Recommendation:** 130 SEK retail for 500 g, 75 SEK for 250 g. Local, hand-tapped honey with a
-story ("four hives and an old dream") justifies the upper-middle of the range.
+**Current price:** 170 SEK retail for 500 g, the only size sold (no 250 g jar). Local,
+hand-tapped honey with a story ("four hives and an old dream") justifies a premium price.
 
-**School classes:** buy at 80 SEK, sell at 130 SEK → **50 SEK/jar (38 %) to the class**, minimum
+**School classes:** buy at 80 SEK, sell at 170 SEK → **90 SEK/jar (53 %) to the class**, minimum
 20 jars.
 
 The original idea (Magnus 50 SEK → class 100 SEK) gives the class 50 % but leaves Magnus ~40
@@ -38,8 +38,8 @@ beekeepers and makes the business hard to sustain.
 | Normal year, 240 jars | Revenue to Magnus |
 | --------------------- | ----------------: |
 | All via classes @ 80  |        19 200 SEK |
-| All retail @ 130      |        31 200 SEK |
-| Half / half           |        25 200 SEK |
+| All retail @ 170      |        40 800 SEK |
+| Half / half           |        30 000 SEK |
 
 ## Name ideas and domains
 

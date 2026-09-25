@@ -28,7 +28,7 @@ describe("POST /api/orders", () => {
     expect(res.body.orderId).toMatch(/^MH-/);
     expect(sent.map((m) => m.to)).toEqual(["magnus@example.com", "anna@example.com"]);
     expect(sent.map((m) => m.replyTo)).toEqual(["anna@example.com", "magnus@example.com"]);
-    expect(sent[0]?.text).toContain("390 kr");
+    expect(sent[0]?.text).toContain("510 kr");
   });
 
   it("rejects invalid input", async () => {

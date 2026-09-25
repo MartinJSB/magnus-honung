@@ -12,15 +12,8 @@ export const PRODUCTS = [
     id: "sommarhonung-500",
     name: "Sommarhonung",
     sizeGrams: 500,
-    priceSek: 130,
+    priceSek: 170,
     description: "Årets skörd från gårdens fyra kupor. Slungad, osilad smak av sommar.",
-  },
-  {
-    id: "sommarhonung-250",
-    name: "Sommarhonung, liten",
-    sizeGrams: 250,
-    priceSek: 75,
-    description: "Samma honung i mindre burk – perfekt som present.",
   },
 ] as const satisfies readonly Product[];
 
