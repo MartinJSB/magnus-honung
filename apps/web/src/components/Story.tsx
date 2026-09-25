@@ -6,12 +6,12 @@ export function Story() {
           <figure className="story__main-photo">
             <img
               src="/images/biodlare.webp"
-              alt="Magnus i bidräkt vid kuporna tillsammans med sin son i egen bidräkt"
+              alt="Magnus i bidräkt vid kuporna tillsammans med sin son Henrik i egen bidräkt"
               width="1000"
               height="1250"
               loading="lazy"
             />
-            <figcaption>Magnus och hans son</figcaption>
+            <figcaption>Magnus och hans son Henrik</figcaption>
           </figure>
         </div>
         <div className="story__text">
