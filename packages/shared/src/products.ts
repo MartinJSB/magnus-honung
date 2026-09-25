@@ -13,8 +13,7 @@ export const PRODUCTS = [
     name: "Sommarhonung",
     sizeGrams: 500,
     priceSek: 170,
-    description:
-      "Årets skörd från gården i Nykvarn. Slungad och tappad på burk för hand.",
+    description: "Årets skörd från gården i Nykvarn. Slungad och tappad på burk för hand.",
   },
 ] as const satisfies readonly Product[];
 
