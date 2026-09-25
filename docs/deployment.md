@@ -40,7 +40,7 @@ Tools: `brew install --cask google-cloud-sdk` and `brew install hashicorp/tap/te
    Check the billing account's currency (Console → Billing → Account management). If it isn't
    SEK, set `budget_currency` to match.
 
-2. **Apply Terraform:**
+2. **Create the state bucket** (see [State](#state)), then **apply Terraform:**
 
    ```bash
    cd infra/terraform
@@ -66,5 +66,13 @@ Tools: `brew install --cask google-cloud-sdk` and `brew install hashicorp/tap/te
 
 ## State
 
-Terraform state is local (`infra/terraform/terraform.tfstate`, gitignored). Keep it backed up,
-or move it to a GCS bucket with a `backend "gcs"` block if more than one person will apply.
+Terraform state lives in the versioned bucket `gs://magnus-honung-tfstate` (europe-north1). It was
+created once by hand before the first `terraform init`:
+
+```bash
+gcloud storage buckets create gs://magnus-honung-tfstate --location=europe-north1 \
+  --uniform-bucket-level-access --public-access-prevention
+gcloud storage buckets update gs://magnus-honung-tfstate --versioning
+```
+
+`terraform.tfvars` is gitignored (the repo is public). Keep a copy somewhere safe.
