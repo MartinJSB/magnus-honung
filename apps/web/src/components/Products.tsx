@@ -17,7 +17,7 @@ export function Products() {
           dig själv eller någon du tycker om.
         </p>
       </div>
-      <div className="products">
+      <div className={PRODUCTS.length === 1 ? "products products--single" : "products"}>
         {PRODUCTS.map((p, i) => (
           <article key={p.id} className="product">
             <div className={`product__visual product__visual--${i}`}>
