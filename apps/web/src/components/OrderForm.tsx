@@ -99,8 +99,8 @@ export function OrderForm() {
           <span>03 — Betala enkelt med Swish</span>
         </div>
         <p className="hint">
-          Hämta hemma hos Magnus i Sundby eller på gården i Nykvarn, efter överenskommelse. Magnus
-          bekräftar plats och tid. Ingen betalning förrän beställningen är bekräftad.
+          Hämta hemma hos Magnus i Sundby i Spånga eller på gården i Nykvarn, efter överenskommelse.
+          Magnus bekräftar plats och tid. Ingen betalning förrän beställningen är bekräftad.
         </p>
       </div>
 

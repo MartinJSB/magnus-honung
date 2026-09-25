@@ -20,7 +20,7 @@ export function Footer() {
       </div>
       <div className="footer__bottom">
         <span>© {new Date().getFullYear()} Magnus Honung</span>
-        <span>Magnus Brolin · Sundby och Nykvarn</span>
+        <span>Magnus Brolin · Sundby i Spånga och Nykvarn</span>
       </div>
     </footer>
   );

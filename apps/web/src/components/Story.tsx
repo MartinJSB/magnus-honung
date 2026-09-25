@@ -27,8 +27,8 @@ export function Story() {
             efter säsongen.
           </p>
           <p>
-            Magnus bor i Sundby och är ofta på gården i Nykvarn. Honungen kan hämtas på båda
-            ställena – ni kommer överens om tid och plats.
+            Magnus bor i Sundby i Spånga och är ofta på gården i Nykvarn. Honungen kan hämtas på
+            båda ställena – ni kommer överens om tid och plats.
           </p>
           <div className="signature">
             Magnus<span>Biodlare i Nykvarn</span>
