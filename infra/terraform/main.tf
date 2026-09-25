@@ -103,6 +103,7 @@ resource "google_secret_manager_secret_version" "smtp_pass" {
 resource "google_service_account" "runtime" {
   account_id   = "${var.service_name}-run"
   display_name = "Cloud Run runtime for ${var.service_name}"
+  depends_on   = [google_project_service.enabled]
 }
 
 resource "google_secret_manager_secret_iam_member" "runtime_smtp_pass" {
@@ -235,6 +236,7 @@ resource "google_iam_workload_identity_pool_provider" "github" {
 resource "google_service_account" "deployer" {
   account_id   = "${var.service_name}-deploy"
   display_name = "GitHub Actions deployer for ${var.service_name}"
+  depends_on   = [google_project_service.enabled]
 }
 
 resource "google_service_account_iam_member" "deployer_wif" {
