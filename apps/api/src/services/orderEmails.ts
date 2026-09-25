@@ -37,6 +37,8 @@ export function buildOrderEmails(order: OrderRequest, orderId: string, inbox: st
     },
     {
       to: order.email,
+      // Mail is sent from no-reply, so customer replies must go to Magnus.
+      replyTo: inbox,
       subject: `Tack för din beställning! (${orderId})`,
       text: `Hej ${order.name}!\n\nTack för din beställning hos Magnus Honung. Magnus hör av sig inom ett par dagar för att bekräfta och berätta hur du betalar (Swish) och hämtar.\n\n${summary}\n\nSurriga hälsningar,\nMagnus`,
     },
