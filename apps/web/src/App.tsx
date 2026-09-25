@@ -10,7 +10,7 @@ export function App() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <Hero />
         <Story />
         <Products />

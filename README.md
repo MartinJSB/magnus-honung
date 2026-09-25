@@ -49,7 +49,7 @@ magnus-honung/
 nvm use            # Node 24+
 npm install
 cp apps/api/.env.example apps/api/.env
-npm run dev        # web on :5173, api on :3001 (Vite proxies /api)
+npm run dev        # web on :3000, api on :3001 (Vite proxies /api)
 ```
 
 Without `SMTP_HOST` set, emails are printed in the terminal instead of sent.

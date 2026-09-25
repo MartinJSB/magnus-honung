@@ -58,7 +58,10 @@ export function OrderForm() {
         setStatus({ kind: "idle" });
       }
     } catch {
-      setStatus({ kind: "error", message: "Något gick fel. Försök igen eller mejla oss direkt." });
+      setStatus({
+        kind: "error",
+        message: "Det gick inte att skicka just nu. Försök igen om en liten stund.",
+      });
     }
   }
 
@@ -79,8 +82,27 @@ export function OrderForm() {
 
   return (
     <section id="bestall" className="section order">
-      <h2>Beställ</h2>
-      <p>Ingen betalning nu – du betalar med Swish när Magnus bekräftat beställningen.</p>
+      <div className="order__intro">
+        <p className="eyebrow">DIREKT FRÅN MAGNUS</p>
+        <h2>
+          En burk till dig?
+          <br />
+          <em>Vi ordnar det.</em>
+        </h2>
+        <p>
+          Skicka en beställningsförfrågan så hör Magnus av sig om tillgång och hur du får din
+          honung.
+        </p>
+        <div className="order__info">
+          <span>01 — Välj dina burkar</span>
+          <span>02 — Magnus bekräftar</span>
+          <span>03 — Betala enkelt med Swish</span>
+        </div>
+        <p className="hint">
+          Hämta hemma hos Magnus i Sundby eller på gården i Nykvarn, efter överenskommelse. Magnus
+          bekräftar plats och tid. Ingen betalning förrän beställningen är bekräftad.
+        </p>
+      </div>
 
       <form onSubmit={onSubmit} noValidate>
         <fieldset className="toggle">
@@ -157,7 +179,7 @@ export function OrderForm() {
           <label className="field">
             Leverans
             <select name="delivery" defaultValue="pickup">
-              <option value="pickup">Hämtar på gården</option>
+              <option value="pickup">Hämtar i Sundby / Nykvarn</option>
               <option value="local-delivery">Leverans i närområdet</option>
             </select>
           </label>
@@ -165,7 +187,11 @@ export function OrderForm() {
 
         <label className="field">
           Meddelande (valfritt)
-          <textarea name="message" rows={3} />
+          <textarea
+            name="message"
+            rows={3}
+            placeholder="Skriv gärna om du helst hämtar i Sundby eller på gården i Nykvarn."
+          />
         </label>
 
         {/* Honeypot for bots: hidden from people and screen readers. */}
@@ -173,7 +199,7 @@ export function OrderForm() {
 
         {status.kind === "error" && <p className="field__error">{status.message}</p>}
         <button className="button" disabled={status.kind === "sending"}>
-          {status.kind === "sending" ? "Skickar…" : "Skicka beställning"}
+          {status.kind === "sending" ? "Skickar…" : "Skicka förfrågan ↗"}
         </button>
       </form>
     </section>

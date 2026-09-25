@@ -1,31 +1,63 @@
+import { Arrow, Bee } from "./Brand";
 export function Hero() {
   return (
-    <section className="hero">
-      <div className="hero__text">
-        <p className="eyebrow">Närproducerad · Slungad på gården</p>
-        <h1>
-          Honung från <em>fyra kupor</em> och en gammal dröm
-        </h1>
-        <p className="lead">
-          Magnus pratade om bin i många år. Nu surrar fyra kolonier på gården, och den första
-          sommarens skörd står på burk.
-        </p>
-        <div className="hero__actions">
-          <a href="#bestall" className="button">
-            Beställ honung
-          </a>
-          <a href="#klass" className="button button--ghost">
-            Sälj med din klass
+    <>
+      <section className="hero">
+        <div className="hero__text">
+          <p className="eyebrow">
+            <span className="little-line" /> SMÅSKALIGT. SVENSKT. PERSONLIGT.
+          </p>
+          <h1>
+            En liten burk.
+            <br />
+            En hel sommar.
+            <br />
+            <em>En gammal dröm.</em>
+          </h1>
+          <p className="hero__intro">
+            Det började med att Magnus pratade om bin.
+            <br className="desktop-break" /> Och pratade lite till. Nu får drömmen ta plats
+            <br className="desktop-break" /> – en kupa och en burk i taget.
+          </p>
+          <div className="hero__actions">
+            <a href="#honung" className="button">
+              Upptäck honungen <Arrow />
+            </a>
+            <a href="#magnus" className="text-link">
+              Lär känna Magnus <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <a className="hero__person" href="#magnus">
+            <img src="/images/springa.jpg" alt="" />
+            <span>
+              Från Magnus, med omtanke.<small>För bina, naturen och det goda i vardagen.</small>
+            </span>
           </a>
         </div>
-      </div>
-      <div className="hero__art" aria-hidden>
-        <div className="comb">
-          {Array.from({ length: 7 }, (_, i) => (
-            <span key={i} className={`cell cell--${i}`} />
-          ))}
+        <div className="hero__visual">
+          <img
+            className="hero__photo"
+            src="/images/honey-still-life.png"
+            alt="Stämningsbild av gyllene honung, vaxkaka och sommarblommor i varmt solljus"
+            fetchPriority="high"
+          />
+          <div className="hero__seal">
+            <span>FRÅN BLOMMA</span>
+            <Bee />
+            <span>TILL BURK</span>
+          </div>
+          <span className="hero__caption">SMAKEN AV EN SVENSK SOMMAR</span>
         </div>
+      </section>
+      <div className="values-strip">
+        <span>Svensk honung</span>
+        <i>✳</i>
+        <span>Småskalig biodling</span>
+        <i>✳</i>
+        <span>Direkt från Magnus</span>
+        <i>✳</i>
+        <span>Med naturen nära</span>
       </div>
-    </section>
+    </>
   );
 }

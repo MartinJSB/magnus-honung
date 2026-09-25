@@ -2,7 +2,7 @@ import { findProduct, orderTotalSek, type OrderRequest } from "@magnus-honung/sh
 import type { Mail } from "./mailer";
 
 const DELIVERY_LABEL: Record<OrderRequest["delivery"], string> = {
-  pickup: "Hämtar själv på gården",
+  pickup: "Hämtar i Sundby eller på gården i Nykvarn, efter överenskommelse",
   "local-delivery": "Leverans i närområdet",
 };
 
