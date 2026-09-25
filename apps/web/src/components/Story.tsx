@@ -6,12 +6,12 @@ export function Story() {
           <figure className="story__main-photo">
             <img
               src="/images/biodlare.webp"
-              alt="Magnus i bidräkt vid kuporna tillsammans med en liten biodlare i egen dräkt"
+              alt="Magnus i bidräkt vid kuporna tillsammans med sin son i egen bidräkt"
               width="1000"
               height="1250"
               loading="lazy"
             />
-            <figcaption>Magnus Brolin</figcaption>
+            <figcaption>Magnus och hans son</figcaption>
           </figure>
         </div>
         <div className="story__text">
