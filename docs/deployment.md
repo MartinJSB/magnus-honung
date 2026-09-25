@@ -35,6 +35,8 @@ Tools: `brew install --cask google-cloud-sdk` and `brew install hashicorp/tap/te
    gcloud projects create magnus-honung
    gcloud billing accounts list
    gcloud billing projects link magnus-honung --billing-account=<ID>
+   gcloud services enable cloudresourcemanager.googleapis.com serviceusage.googleapis.com \
+     --project=magnus-honung
    ```
 
    Check the billing account's currency (Console → Billing → Account management). If it isn't
