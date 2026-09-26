@@ -37,8 +37,8 @@ export function Hero() {
         <div className="hero__visual">
           <img
             className="hero__photo"
-            src="/images/honey-still-life.png"
-            alt="Stämningsbild av gyllene honung, vaxkaka och sommarblommor i varmt solljus"
+            src="/images/honung.webp"
+            alt="En sked lyfter krämig honung ur en öppen glasburk med guldlock på ett träbord"
             fetchPriority="high"
           />
           <div className="hero__seal">
