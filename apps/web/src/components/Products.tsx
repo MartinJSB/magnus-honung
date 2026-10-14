@@ -1,5 +1,5 @@
 import { PRODUCTS } from "@magnus-honung/shared";
-import { Arrow, Bee } from "./Brand";
+import { Arrow } from "./Brand";
 export function Products() {
   return (
     <section id="honung" className="section honey-section">
@@ -29,8 +29,6 @@ export function Products() {
               >
                 <div className="jar__lid" />
                 <div className="jar__label">
-                  <Bee />
-                  <span>magnus</span>
                   <small>SVENSK HONUNG</small>
                   <i>{p.sizeGrams} g · Nykvarn</i>
                 </div>
